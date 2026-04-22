@@ -1,6 +1,7 @@
 ﻿using System.Data.SqlClient;
 
-namespace QuanLyDuAn.DB
+namespace QuanLyDuAn.vcl
+
 {
     internal class DBConnect
     {
