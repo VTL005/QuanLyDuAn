@@ -8,7 +8,7 @@ namespace QuanLyDuAn.DB
         private string connectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=QuanLyDuAnDB;Integrated Security=True";
 
         public SqlConnection GetConnection()
-        {// toi la my an cut choa
+        {// toi la my cho
             // toi la vy the long adu
             // xin chao tat ca moi nguoi
             return new SqlConnection(connectionString);
