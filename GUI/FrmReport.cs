@@ -16,5 +16,10 @@ namespace QuanLyDuAn.GUI
         {
             InitializeComponent();
         }
+
+        private void uiDoughnutChart1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

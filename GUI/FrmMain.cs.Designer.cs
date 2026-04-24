@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.pnMenu = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnProject = new System.Windows.Forms.Button();
@@ -37,8 +40,19 @@
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.pnContent = new System.Windows.Forms.Panel();
             this.lblContentTitle = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog3 = new System.Windows.Forms.ColorDialog();
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.uiStyleManager1 = new Sunny.UI.UIStyleManager(this.components);
+            this.uiStyleManager2 = new Sunny.UI.UIStyleManager(this.components);
+            this.uiStyleManager3 = new Sunny.UI.UIStyleManager(this.components);
+            this.uiStyleManager4 = new Sunny.UI.UIStyleManager(this.components);
             this.pnMenu.SuspendLayout();
             this.pnContent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMenu
@@ -157,15 +171,18 @@
             // 
             this.pnContent.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pnContent.Controls.Add(this.lblContentTitle);
+            this.guna2Transition1.SetDecoration(this.pnContent, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnContent.Location = new System.Drawing.Point(220, 0);
             this.pnContent.Name = "pnContent";
             this.pnContent.Size = new System.Drawing.Size(694, 450);
             this.pnContent.TabIndex = 1;
+            this.pnContent.Paint += new System.Windows.Forms.PaintEventHandler(this.pnContent_Paint);
             // 
             // lblContentTitle
             // 
             this.lblContentTitle.AutoSize = true;
+            this.guna2Transition1.SetDecoration(this.lblContentTitle, Guna.UI2.AnimatorNS.DecorationType.None);
             this.lblContentTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblContentTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContentTitle.ForeColor = System.Drawing.Color.SteelBlue;
@@ -175,6 +192,26 @@
             this.lblContentTitle.TabIndex = 0;
             this.lblContentTitle.Text = "Trang chính";
             // 
+            // guna2Transition1
+            // 
+            this.guna2Transition1.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation5;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -182,6 +219,7 @@
             this.ClientSize = new System.Drawing.Size(914, 450);
             this.Controls.Add(this.pnContent);
             this.Controls.Add(this.pnMenu);
+            this.guna2Transition1.SetDecoration(this, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý dự án";
@@ -190,6 +228,7 @@
             this.pnMenu.ResumeLayout(false);
             this.pnContent.ResumeLayout(false);
             this.pnContent.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -205,6 +244,16 @@
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Label lblContentTitle;
+        private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog2;
+        private System.Windows.Forms.ColorDialog colorDialog3;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Sunny.UI.UIStyleManager uiStyleManager1;
+        private Sunny.UI.UIStyleManager uiStyleManager2;
+        private Sunny.UI.UIStyleManager uiStyleManager3;
+        private Sunny.UI.UIStyleManager uiStyleManager4;
     }
 }
 

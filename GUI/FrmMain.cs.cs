@@ -91,5 +91,10 @@ namespace QuanLyDuAn.GUI
                 f.Show();
             }
         }
+
+        private void pnContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
