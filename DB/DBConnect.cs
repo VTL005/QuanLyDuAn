@@ -11,6 +11,7 @@ namespace QuanLyDuAn.DB
         {// toi la my
             // toi la vy the long adu
             // xin chao tat ca moi nguoi
+            //hi
             return new SqlConnection(connectionString);
         }
     }
