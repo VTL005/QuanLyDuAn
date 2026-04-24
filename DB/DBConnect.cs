@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace QuanLyDuAn.vcll
+namespace QuanLyDuAn.DB
 
 {
     internal class DBConnect
@@ -9,6 +9,7 @@ namespace QuanLyDuAn.vcll
 
         public SqlConnection GetConnection()
         {// toi la my
+            // toi la vy the long
             return new SqlConnection(connectionString);
         }
     }
