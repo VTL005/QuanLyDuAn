@@ -10,6 +10,7 @@ namespace QuanLyDuAn.DB
         public SqlConnection GetConnection()
         {// toi la my an cut cho
             // toi la vy the long adu
+            // xin chao tat ca moi nguoi
             return new SqlConnection(connectionString);
         }
     }
