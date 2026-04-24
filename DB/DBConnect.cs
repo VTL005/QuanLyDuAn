@@ -9,7 +9,7 @@ namespace QuanLyDuAn.DB
 
         public SqlConnection GetConnection()
         {
-            // toi la gaysua
+            // toi la gay
             return new SqlConnection(connectionString);
         }
     }
